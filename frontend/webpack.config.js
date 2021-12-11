@@ -16,8 +16,7 @@ const cssLoaders = [
 const config = {
     context: path.resolve(__dirname, 'src'),
     entry: {
-        index: ['./js/index.jsx', './css/style.scss'],
-        admin: ['./js/admin.jsx', './css/admin.scss']
+        index: ['./js/index.jsx', './css/style.scss']
     },
     resolve: {
         extensions: ['.jsx', '.js', '.json'],
