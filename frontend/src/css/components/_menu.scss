@@ -1,0 +1,64 @@
+.menu {
+    z-index: 5;
+    position: absolute;
+    text-align: left;
+    top: $space * 2;
+    left: $space * 4;
+    width: 100%;
+    font-size: $space * 3;
+    color: $white;
+
+
+    &.visible {
+        background-color: rgba($grey, .5);
+        top: 0;
+        left: 0;
+    }
+
+    i {
+        cursor: pointer;
+        display: inline-block;
+        font-size: 32px;
+        transition: .5s;
+
+        &:hover {
+            transform: scale(2, 2);
+        }
+    }
+
+    .menu-pages-navigation {
+        width: 0;
+        opacity: 0;
+        overflow: hidden;
+        transition-duration: 1s;
+
+        &.visible {
+            opacity: 1;
+
+            @media screen and (min-width: $bp-xs){
+                width: 70%;
+            }
+
+            @media screen and (min-width: $bp-sm){
+                width: 45%;
+            }
+            @media screen and (min-width: $bp-md){
+                width: 35%;
+            }
+            @media screen and (min-width: $bp-lg){
+                width: 15%;
+            }
+        }
+
+        background-color: $white;
+        height: 100vh;
+        color: $grey;
+        padding: $space * 2;
+
+        ul {
+            padding-top: $space * 5;
+            text-align: right;
+            line-height: 2em;
+        }
+    }
+}

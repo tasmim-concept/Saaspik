@@ -1,0 +1,68 @@
+footer {
+    background-color: rgba($pink, .05);
+    background-image:
+            url('../img/overlay2.png');
+    background-size: contain;
+    background-repeat: repeat;
+
+    .container {
+        nav {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            a {
+                font-weight: 400;
+                text-align: left;
+            }
+            div {
+                width: (100%/3);
+                margin-bottom: $space * 5;
+
+                @media screen and (max-width: $bp-md) {
+                    width: (100%/2);
+                }
+            }
+            @media screen and (max-width: $bp-sm) {
+                padding-left: $space * 4;
+                padding-right: $space * 4;
+            }
+        }
+
+        .contact {
+            .address {
+                min-width: 100%;
+            }
+            @media screen and (min-width: $bp-md) {
+                display: flex;
+                .address {
+                    min-width: 200%;
+                }
+            }
+        }
+    }
+}
+
+.social-medias {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    min-width: 100%;
+    max-width: 100%;
+    a {
+        display: block;
+        .icon {
+            font-size: 45px;
+        }
+    }
+}
+
+#legalNotice {
+    display: flex;
+    justify-content: space-between;
+
+    @media screen and (max-width: $bp-sm) {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+

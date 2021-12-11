@@ -1,0 +1,9 @@
+.checklist {
+    font-weight: 500;
+    li.checked:before {
+        @extend .icon_check;
+        margin-right: $space * 2;
+        color: $pink;
+        font-weight: 600;
+    }
+}

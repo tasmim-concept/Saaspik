@@ -1,0 +1,16 @@
+#goTop {
+    position: fixed;
+    bottom: 32px;
+    right: 64px;
+    font-size: 64px;
+    height: 64px;
+    width: 64px;
+    color: $grey;
+    cursor: pointer;
+    @extend %text-shadow;
+    transition: .2s;
+    &:hover {
+        color: $pink;
+
+    }
+}

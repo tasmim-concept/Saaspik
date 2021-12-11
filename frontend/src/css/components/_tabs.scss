@@ -1,0 +1,108 @@
+.tabs {
+    margin: $space * 5 auto;
+
+    .tab-sections {
+        display: flex;
+        justify-content: space-evenly;
+        li {
+            transition: .5s;
+            cursor: pointer;
+            padding: $space * 1.5;
+            line-height: $space;
+            font-size: 14px;
+            border-radius: 5px;
+            font-weight: 600;
+            &.pink {
+                background-color: rgba($pink, .2);
+                color: $pink;
+                &:hover, &.active {
+                    background-color: $pink;
+                    color: $white;
+                }
+            }
+            &.purple {
+                background-color: rgba($purple, .2);
+                color: $purple;
+                &:hover, &.active {
+                    background-color: $purple;
+                    color: $white;
+                }
+            }
+            &.green {
+                background-color: rgba($green, .2);
+                color: $green;
+                &:hover, &.active {
+                    background-color: $green;
+                    color: $white;
+                }
+            }
+            &.fushia {
+                background-color: rgba($fushia, .2);
+                color: $fushia;
+                &:hover, &.active {
+                    background-color: $fushia;
+                    color: $white;
+                }
+            }
+        }
+    }
+    .tab-content {
+        margin: $space * 5 auto;
+        opacity: 0;
+        transition-duration: .5s;
+
+        &.visible {
+            opacity: 1;
+        }
+
+        .tab-pane {
+            cursor: pointer;
+            border: solid 1px rgba($grey, 0.2);
+            border-radius: 3px;
+            margin: $space * 3 auto;
+            padding: $space * 2 $space * 3;
+
+            .tab-pane-text {
+                height: 0;
+                opacity: 0;
+                overflow: hidden;
+                transition: all .5s ease;
+            }
+
+            .tab-pane-header {
+                display: flex;
+                justify-content: space-between;
+                h4 {
+                    margin: 0;
+                }
+
+                .icon {
+                    margin-top: $space;
+                    @extend .arrow_carrot-down;
+                    color: $grey;
+                }
+            }
+
+            &.active {
+                @extend %box-shadow;
+                .tab-pane-text {
+                    height: 100px;
+                    opacity: 1;
+                }
+
+                .tab-pane-header {
+                    display: flex;
+                    justify-content: space-between;
+                    h4 {
+                        margin-bottom: $space * 2;
+                    }
+
+                    .icon {
+                        @extend .arrow_carrot-up;
+                        color: $pink;
+                    }
+                }
+            }
+        }
+    }
+}

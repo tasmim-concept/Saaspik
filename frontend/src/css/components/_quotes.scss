@@ -1,0 +1,107 @@
+.carousel {
+    margin-top: $space * 10;
+    overflow: hidden;
+    display: flex;
+    @extend %box-shadow;
+    border-radius: 5px;
+
+    .quote-item {
+        animation: 25s ease infinite slider;
+        min-width: 100%;
+        display: flex;
+        justify-content: space-between;
+        @media screen and (min-width: $bp-xs){
+            flex-direction: column;
+            line-height: $space * 3;
+            h4, p {
+                margin: 0;
+            }
+            padding: $space * 5 0;
+        }
+        @media screen and (min-width: $bp-md){
+            flex-direction: row;
+            line-height: $space * 4;
+            padding: 0;
+        }
+        .quote-image {
+            @media screen and (min-width: $bp-xs){
+                overflow: hidden;
+                width: 64px;
+                height: 64px;
+                border-radius: 50%;
+                margin: $space 0 0 $space * 7;
+            }
+            @media screen and (min-width: $bp-md){
+                overflow: initial;
+                height: 100%;
+                margin: 0 25% 0 0;
+            }
+            img {
+                @media screen and (min-width: $bp-xs){
+                    width: 78px;
+                    height: 78px;
+                }
+                @media screen and (min-width: $bp-md){
+                    width: 350px;
+                    height: 100%;
+                    margin: 0;
+                }
+
+            }
+        }
+
+        .quote-text {
+            margin: $space auto;
+
+            @media screen and (min-width: $bp-xs){
+                width: 80%;
+            }
+            @media screen and (min-width: $bp-md){
+                width: 50%;
+            }
+        }
+    }
+}
+.css-slider {
+    .direction {
+        display: none;
+    }
+}
+.js-slider {
+    .direction {
+        @media screen and (min-width: $bp-xs) {
+            display: none;
+        }
+        @media screen and (min-width: $bp-md) {
+            display: flex;
+        }
+        justify-content: center;
+        position: relative;
+        top: -75px;
+        i {
+            cursor: pointer;
+            padding: $space * 2;
+            font-size: 32px;
+        }
+        i:hover {
+            color: $pink;
+        }
+    }
+
+}
+
+.css-slider, .js-slider {
+    &:after {
+        content: '';
+        display: block;
+        position: relative;
+        height: 41px;
+        width: 95%;
+        top: -40px;
+        background-image: url('../img/quote.png');
+        background-position: right;
+        background-repeat: no-repeat;
+        background-size: contain;
+        opacity: .8;
+    }
+}

@@ -1,0 +1,88 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;800&display=swap');
+@font-face {
+    font-family: 'ElegantIcons';
+    src:url('../fonts/ElegantIcons.eot');
+    src:url('../fonts/ElegantIcons.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/ElegantIcons.woff') format('woff'),
+    url('../fonts/ElegantIcons.ttf') format('truetype'),
+    url('../fonts/ElegantIcons.svg#ElegantIcons') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    font-family: 'Poppins', 'Montserrat', 'sans-serif';
+    font-size: 16px;
+    font-weight: 400;
+    line-height: $space * 4;
+    color: $black;
+}
+
+h1 {
+    font-weight: 800;
+    font-size: 32px;
+    text-align: center;
+    line-height: 47px;
+    margin-bottom: $space * 3;
+}
+
+h2 {
+    color: #fa7070;
+    text-transform: uppercase;
+    font-weight: 500;
+    letter-spacing: 3px;
+    text-align: center;
+    margin-bottom: $space * 2;
+}
+
+h3 {
+    text-align: center;
+    font-size: 40px;
+    font-weight: 700;
+    margin-bottom: $space * 2;
+    line-height: 47px;
+}
+
+h4 {
+    font-size: 20px;
+    font-weight: 500;
+    margin-bottom: $space * 2;
+}
+
+p, input, textarea {
+    font-size: inherit;
+    font-family: inherit;
+    color: $grey;
+    margin-bottom: $space;
+}
+
+ul li {
+    font-size: inherit;
+}
+
+a, button, input[type='submit'] {
+    font-size: inherit;
+    color: $grey;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+a {
+    transition-duration: .5s;
+    &:hover {
+        color: $pink;
+    }
+}
+
+input::placeholder {
+    color: inherit;
+}
+
+em {
+    color: $pink;
+}
+
+p a {
+    color: $pink;
+}

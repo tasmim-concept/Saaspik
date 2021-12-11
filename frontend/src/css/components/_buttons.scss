@@ -1,0 +1,77 @@
+button, input[type='submit'] {
+    border-radius: 32px;
+    padding: $space * 1.5 $space * 6;
+    transition-duration: .5s;
+
+    &.btn-primary-dark {
+        background-color: rgba($pink, .5);
+        color: $white;
+        border: solid 1px $white;
+
+
+        &:hover, &:active, &:focus {
+            @extend %box-shadow;
+            background-color: $white;
+            color: $pink;
+            border: solid 1px $pink;
+        }
+    }
+
+    &.btn-primary-light {
+        background-color: $white;
+        color: $pink;
+        border: solid 1px $pink;
+
+
+        &:hover, &:active, &:focus {
+            @extend %box-shadow;
+            background-color: $pink;
+            color: $white;
+            border: solid 1px $white;
+        }
+    }
+}
+
+a.btn-video{
+    &:before {
+        transition: .5s;
+        margin-right: $space;
+        background-color: $white;
+        color: $pink;
+        @extend %text-shadow;
+        padding: $space + 3 $space * 2;
+        font-size: $space * 3;
+        border-radius: 50%;
+        content: '⏵';
+        height: $space * 2;
+        width: $space * 2;
+    }
+    &:hover {
+        &:before {
+            @extend %box-shadow;
+            background-color: $pink;
+            color: $white;
+            border: solid 2px;
+        }
+    }
+}
+
+input {
+    border-bottom: solid 1px $white;
+    background-color: transparent;
+}
+
+.underline-light {
+    background: linear-gradient(transparent 70%, $white 75%) no-repeat;
+}
+.underline-dark {
+    background: linear-gradient(transparent 70%, $pink 75%) no-repeat;
+}
+.underline-dark, .underline-light {
+    transition: background-size .3s;
+    background-size: 100% 100%;
+
+    &:hover {
+        background-size: 0 100%;
+    }
+}

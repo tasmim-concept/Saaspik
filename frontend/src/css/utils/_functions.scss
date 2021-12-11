@@ -1,0 +1,26 @@
+@function strip-unit($number) {
+    @if type-of($number) == 'number' and not unitless($number) {
+        @return $number / ($number * 0 + 1);
+    }
+    @return $number;
+}
+
+@function em($size, $base: $font-size-base) {
+    @return 1em * ($size / strip-unit($base));
+}
+
+@function rem($size, $base: $font-size-base) {
+    @return 1em * ($size / strip-unit($base));
+}
+
+@function difference ($number1, $number2) {
+    @return strip-unit($number1) - strip-unit($number2);
+}
+
+@function time ($number1, $number2) {
+    @return strip-unit($number1) * strip-unit($number2);
+}
+
+@function quotient ($number1, $number2) {
+    @return strip-unit($number1) / strip-unit($number2);
+}

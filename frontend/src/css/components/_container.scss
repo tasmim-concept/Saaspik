@@ -1,0 +1,22 @@
+.container {
+    margin: auto;
+    @media screen and (min-width: $bp-xs) {
+        width: 100%;
+    }
+    @media screen and (min-width: $bp-sm) {
+        width: 520px;
+    }
+    @media screen and (min-width: $bp-md) {
+        width: 710px;
+    }
+    @media screen and (min-width: $bp-lg) {
+        width: 940px;
+    }
+    @media screen and (min-width: $bp-xl) {
+        width: 1150px;
+    }
+}
+
+.inline {
+    display: flex;
+}
